@@ -3,8 +3,21 @@
   border-bottom: 1px solid $border-color-header;
 
   &__nav {
-    @include centeredFlex();
-    justify-content: space-between;
+    @include flex($dis: flex, $ai: center, $jc: space-between);
+    // justify-content: space-between;
+  }
+}
+.header .logo {
+  padding-top: 16px;
+  padding-bottom: 16px;
+
+  @media screen and(min-width:768px) {
+    padding-top: 26px;
+    padding-bottom: 26px;
+  }
+  @media screen and (min-width: 1200px) {
+    padding-top: 24px;
+    padding-bottom: 25px;
   }
 }
 .burger {
@@ -29,8 +42,7 @@
 .nav,
 .contact {
   @extend %list;
-  @extend %link;
-  @include centeredFlex();
+  @include flex($dis: flex, $ai: center, $jc: center);
   margin-left: 93px;
   font-weight: 500;
   font-size: 14px;
@@ -48,7 +60,6 @@
 }
 
 .nav__link {
-  @extend %link;
   position: relative;
   display: block;
 
@@ -97,6 +108,5 @@
   }
 }
 .contact__link {
-  @extend %link;
   color: $second-text-color;
 }

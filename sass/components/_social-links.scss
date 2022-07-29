@@ -1,6 +1,7 @@
 .social__links {
-  @include centeredFlex($type: flex);
   @extend %list;
+  @include flex($dis: flex, $ai: center, $jc: center);
+
   margin-left: 32px;
   margin-right: 32px;
   margin-bottom: 30px;
@@ -10,9 +11,7 @@
   @extend %list;
 
   &__link {
-    @extend %link;
-    @include centeredFlex($type: flex);
-    justify-content: center;
+    @include flex($dis: flex, $ai: center, $jc: center);
     border: transparent;
     border-radius: 50%;
     width: 44px;
@@ -36,7 +35,8 @@
 .footer {
   &__social-links {
     @extend %list;
-    @include centeredFlex($type: flex);
+    @include flex($dis: flex, $ai: center, $jc: center);
+    
     gap: 10px;
   }
 

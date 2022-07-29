@@ -36,8 +36,7 @@
     top: 8px;
     right: 8px;
 
-    @include centeredFlex($type: flex);
-    justify-content: center;
+    @include flex($dis: flex, $ai: center, $jc: center);
 
     cursor: pointer;
 
@@ -97,8 +96,7 @@
     color: $second-text-color;
   }
   &__comment {
-    @include centeredFlex($type: flex);
-    justify-content: center;
+    @include flex($dis: flex, $ai: center, $jc: center);
     resize: none;
     padding: 12px 16px;
     height: 120px;
@@ -111,7 +109,7 @@
     }
   }
   &__deal {
-    @include centeredFlex($type: flex);
+    @include flex($dis: flex, $ai: center, $jc: center);
     margin-top: 20px;
     font-size: 14px;
     letter-spacing: 0.03em;

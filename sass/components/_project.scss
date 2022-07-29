@@ -1,11 +1,10 @@
 /* -------стиль проэкты ---------*/
 .filters {
   @extend %section;
- 
 
   &__list {
     @extend %list;
-    @include centeredFlex($type: flex);
+    @include flex($dis: flex, $ai: center, $jc: center);
     justify-content: center;
 
     padding-bottom: 50px;
@@ -34,7 +33,7 @@
     }
   }
   &__list {
-    @include centeredFlex($type: flex);
+    @include flex($dis: flex, $ai: center, $jc: center);
     flex-wrap: wrap;
     @extend %list;
     gap: 30px;

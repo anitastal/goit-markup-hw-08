@@ -5,37 +5,65 @@
 
   font-size: 14px;
   line-height: 1.71;
+  text-align: center;
   background-color: $footer-bgcolor;
 
+  @media screen and(min-width:1200px) {
+    text-align: left;
+  }
+
   &__wrap {
-    @include centeredFlex($type: flex);
-    align-items: baseline;
+    @media screen and(min-width:768px) {
+      display: inline-flex;
+      align-items: baseline;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+    @media screen and(min-width:1200px) {
+      // @include flex($dis: flex, $ai: baseline);
+      display: flex;
+      align-items: baseline;
+      justify-content: flex-start;
+      // flex-wrap: nowrap;
+    }
   }
   &__nav {
-    margin-right: 70px;
+    margin-bottom: 60px;
+
+    @media screen and(min-width:768px) {
+      margin-bottom: 0;
+    }
+
+    @media screen and(min-width:1200px) {
+      margin-bottom: 0;
+      margin-right: 70px;
+    }
   }
   &__logo__studio {
     color: $header-color;
   }
+  &__social-links {
+    margin-bottom: 60px;
+
+    @media screen and(min-width:768px) {
+      margin-bottom: 0;
+    }
+  }
 }
 
 .address {
-  max-width: 231px;
   margin-top: 20px;
   text-decoration: none;
 
   &__list {
     @extend %list;
   }
-  &__item {
-    width: 231px;
-  }
+
   &__item::not(:last-child) {
     margin-bottom: 9px;
   }
 
   &__link {
-    @extend %link;
     margin-bottom: 9px;
     color: $footer-text-color;
   }
@@ -46,7 +74,9 @@
   }
 }
 .join {
-  margin-right: 93px;
+  @media screen and(min-width:1200px) {
+    margin-right: 93px;
+  }
 
   &__title {
     margin: 0;
@@ -78,7 +108,17 @@
 }
 
 .form {
-  @include centeredFlex($type: flex);
+  @media screen and(min-width:768px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  @media screen and(min-width:1200px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
   &__input {
     padding: 0;
@@ -94,14 +134,14 @@
 
   &__button {
     @extend %button;
-    @include centeredFlex($type: inline-flex);
+    @include flex($dis: inline-flex);
+    margin-top: 20px;
     padding-left: 29px;
     padding-top: 10px;
     padding-bottom: 10px;
     padding-right: 28px;
 
-    margin-left: 12px;
-    min-width: 200px;
+    max-width: 200px;
 
     height: 50px;
 
@@ -115,8 +155,11 @@
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
     color: $header-color;
     background-color: $accent-color;
-  }
 
+    @media screen and(min-width:1200px) {
+      margin-top: 0;
+    }
+  }
   &__icon {
     width: 24px;
     height: 24px;

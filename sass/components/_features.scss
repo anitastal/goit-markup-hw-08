@@ -3,7 +3,7 @@
   padding-bottom: 0;
 
   @media sreen and (min-width: 768px) {
-    @include centeredFlex($type: flex);
+    @include flex($dis: flex, $ai: center, $jc: center);
   }
 
   &__list {

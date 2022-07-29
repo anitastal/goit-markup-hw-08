@@ -1,5 +1,6 @@
 .work {
   @extend %section;
+  @extend %list;
 
   &__title {
     margin-top: 0;
@@ -12,11 +13,11 @@
   }
 
   &__list {
-    @extend %list;
-    @include centeredFlex($type: flex);
+    @include flex($dis: flex, $ai: center, $jc: center);
     gap: 30px;
   }
   &__item {
+    @extend %list;
     position: relative;
   }
   &__item:hover &__label {
@@ -31,7 +32,7 @@
 
     opacity: 0;
 
-    @include centeredFlex($type: flex);
+    @include flex($dis: flex, $ai: center, $jc: center);
     justify-content: center;
 
     margin: 0;
