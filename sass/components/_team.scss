@@ -1,0 +1,50 @@
+.team {
+  @extend %section;
+  line-height: 1.19;
+
+  &:nth-child(2n) {
+    background-color: $background-button;
+  }
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 50px;
+
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+  }
+  &__list {
+    @extend %list;
+    @include centeredFlex($type: flex);
+    gap: 30px;
+  }
+  &__card {
+    background-color: $header-color;
+
+    border-radius: 0px 0px 4px 4px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+  }
+}
+.staff {
+  padding-top: 30px;
+
+  &__name {
+    margin: 0px;
+    margin-bottom: 10px;
+
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
+  }
+  &__position {
+    margin: 0;
+    margin-bottom: 16px;
+
+    font-size: 16px;
+    color: $second-text-color;
+    text-align: center;
+  }
+}

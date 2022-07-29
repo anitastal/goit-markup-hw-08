@@ -1,0 +1,16 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  list-style: none;
+  color: $main-text-color;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+link {
+  text-decoration: none;
+}

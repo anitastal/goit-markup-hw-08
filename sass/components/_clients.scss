@@ -1,0 +1,43 @@
+.clients {
+  @extend %section;
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 50px;
+
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+  }
+  &__list {
+    @extend %list;
+    @include centeredFlex($type: flex);
+    justify-content: space-between;
+  }
+
+  &__link {
+    @include centeredFlex($type: flex);
+    justify-content: center;
+    width: 170px;
+    height: 92px;
+    border: 1px solid $icons-color;
+    border-radius: 4px;
+
+    transition: border-color var(--main-transformation);
+  }
+  &__link:hover,
+  &__link:focus,
+  &__link:hover &__icon,
+  &__link:focus &__icon {
+    border-color: $accent-color;
+    fill: $accent-color;
+  }
+  &__icon {
+    width: 106px;
+    height: 60px;
+    fill: $icons-color;
+
+    transition: fill var(--main-transformation);
+  }
+}
