@@ -2,7 +2,6 @@
   font-family: 'Raleway', sans-serif;
   @include font(26px, 700, 28px);
   text-decoration: none;
-
   &__web {
     color: $accent-color;
   }
@@ -10,4 +9,7 @@
   &__studio {
     color: $studio-color;
   }
+}
+.footer__logo__studio {
+  color: $header-color;
 }

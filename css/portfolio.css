@@ -280,12 +280,7 @@ img {
   max-width: 100%;
 }
 
-link {
-  text-decoration: none;
-}
-
-.footer__social-links, .networks, .social__links, .address__list, .project__icon, .project__list, .filters__list, .nav,
-.contact {
+.footer__social-links, .networks, .social__links, .address__list, .project__icon, .project__list, .filters__list, .contact, .nav {
   padding: 0;
   margin: 0;
   font-style: normal;
@@ -293,7 +288,11 @@ link {
   text-decoration: none;
 }
 
-.footer, .filters {
+.contact__link, .nav__link {
+  text-decoration: none;
+}
+
+.footer, .filters, .header {
   padding-top: 94px;
   padding-bottom: 94px;
 }
@@ -331,84 +330,63 @@ link {
 }
 
 .header {
+  position: relative;
   background-color: #ffffff;
   border-bottom: 1px solid rgb(236, 236, 236);
-}
-.header__nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.header .logo {
   padding-top: 16px;
   padding-bottom: 16px;
 }
 @media screen and (min-width: 768px) {
-  .header .logo {
+  .header {
     padding-top: 26px;
     padding-bottom: 26px;
   }
 }
 @media screen and (min-width: 1200px) {
-  .header .logo {
+  .header {
     padding-top: 24px;
     padding-bottom: 25px;
   }
 }
 
-.burger {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  margin: 0;
-  padding: 0;
-  border: none;
-  background-color: transparent;
-}
-.burger .icon-close {
-  display: none;
-}
-.burger.is-open .icon-close {
-  display: block;
-}
-.burger.is-open .icon-menu {
-  display: none;
+/* стиль навигации */
+.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding-left: 40px;
+  gap: 50px;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
 }
 
-/* стиль навигации */
-.nav,
 .contact {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-left: 93px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  margin-top: 306px;
+  padding-left: 40px;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   text-decoration: none;
 }
-.nav__link:hover, .nav__link:focus,
-.contact__link:hover,
-.contact__link:focus {
+.contact__link:hover, .contact__link:focus {
   color: #2196f3;
-}
-
-.nav {
-  gap: 50px;
 }
 
 .nav__link {
@@ -421,17 +399,18 @@ link {
   color: #2196f3;
 }
 
-.nav__link--current::after {
-  content: "";
-  position: absolute;
-  bottom: -32px;
-  display: block;
-  width: 100%;
-  height: 4px;
-  background-color: #2196f3;
-  border-radius: 2px;
+@media screen and (min-width: 768px) {
+  .nav__link--current::after {
+    content: "";
+    position: absolute;
+    bottom: -32px;
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: #2196f3;
+    border-radius: 2px;
+  }
 }
-
 .contact {
   gap: 30px;
   margin-left: auto;
@@ -453,6 +432,16 @@ link {
 }
 
 .contact__link {
+  font-weight: 500;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+}
+.contact__link.tel {
+  font-size: 34px;
+  color: #2196f3;
+}
+.contact__link.mail {
+  font-size: 24px;
   color: #757575;
 }
 
@@ -469,6 +458,10 @@ link {
 }
 .logo__studio {
   color: #000000;
+}
+
+.footer__logo__studio {
+  color: #ffffff;
 }
 
 /* -------стиль проэкты ---------*/
@@ -628,9 +621,6 @@ link {
     margin-right: 70px;
   }
 }
-.footer__logo__studio {
-  color: #ffffff;
-}
 .footer__social-links {
   margin-bottom: 60px;
 }
@@ -703,12 +693,16 @@ link {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
 .form__input {
@@ -751,6 +745,7 @@ link {
 }
 @media screen and (min-width: 1200px) {
   .form__button {
+    margin-left: 12px;
     margin-top: 0;
   }
 }

@@ -39,9 +39,7 @@
       margin-right: 70px;
     }
   }
-  &__logo__studio {
-    color: $header-color;
-  }
+
   &__social-links {
     margin-bottom: 60px;
 
@@ -116,8 +114,9 @@
   }
   @media screen and(min-width:1200px) {
     display: flex;
+    flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
   }
 
   &__input {
@@ -157,6 +156,7 @@
     background-color: $accent-color;
 
     @media screen and(min-width:1200px) {
+      margin-left: 12px;
       margin-top: 0;
     }
   }
