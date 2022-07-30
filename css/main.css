@@ -293,8 +293,12 @@ img {
 }
 
 .footer, .clients, .team, .work, .features, .hero, .header {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding: 60px 0px;
+}
+@media screen and (min-width: 768px) {
+  .footer, .clients, .team, .work, .features, .hero, .header {
+    padding: 94px 0px;
+  }
 }
 
 .modal__button, .form__button, .hero__button {
@@ -509,6 +513,7 @@ img {
 }
 
 .features {
+  padding-top: 60px;
   padding-bottom: 60px;
 }
 @media sreen and (min-width: 768px) {

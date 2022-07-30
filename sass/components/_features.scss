@@ -1,5 +1,6 @@
 .features {
   @extend %section;
+  padding-top: 60px;
   padding-bottom: 60px;
 
   @media sreen and (min-width: 768px) {

@@ -293,8 +293,12 @@ img {
 }
 
 .footer, .filters, .header {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding: 60px 0px;
+}
+@media screen and (min-width: 768px) {
+  .footer, .filters, .header {
+    padding: 94px 0px;
+  }
 }
 
 .vissually-hidden {
