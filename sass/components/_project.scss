@@ -4,11 +4,14 @@
 
   &__list {
     @extend %list;
-    @include flex($dis: flex, $ai: center, $jc: center);
-    justify-content: center;
 
-    padding-bottom: 50px;
+    padding-bottom: 40px;
+    // padding-bottom: 50px;
     gap: 8px;
+
+    @media screen and (min-width: 768px) {
+      text-align: center;
+    }
   }
   &__button {
     @extend %button;
@@ -19,33 +22,50 @@
       background-color: $accent-color;
     }
   }
+  &__button:nth-child(-n + 2) {
+    margin-bottom: 15px;
+  }
 }
+
 .vissually-hidden {
   @extend %vissually-hidden;
 }
 .project {
+  &__list {
+    @extend %list;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+
+    @media screen and(min-width:768px) {
+      margin: -15px;
+      // gap: 30px;
+    }
+  }
   &__item {
-    max-width: 370px;
+    width: 100%;
     transition: box-shadow $main-transformation;
 
     &:hover .card__text {
       transform: translateY(0);
     }
+    @media screen and(min-width:768px) {
+      width: calc((100% - 4 * 15px) / 2);
+    }
+    @media screen and(min-width:1200px) {
+      width: calc((100% - 3 * 15px) / 3);
+    }
   }
-  &__list {
-    @include flex($dis: flex, $ai: center, $jc: center);
-    flex-wrap: wrap;
-    @extend %list;
-    gap: 30px;
-  }
+
   &__icon {
     @extend %list;
-    max-width: 370px;
+    // max-width: 370px;
     transition: box-shadow $main-transformation;
 
     &:hover {
-      box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16), 0px 4px 4px 0px rgba(0, 0, 0, 0.06),
-        0px 1px 1px 0px rgba(0, 0, 0, 0.12);
+      box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16),
+        0px 4px 4px 0px rgba(0, 0, 0, 0.06), 0px 1px 1px 0px rgba(0, 0, 0, 0.12);
     }
   }
   &__name {

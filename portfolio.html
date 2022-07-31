@@ -19,38 +19,55 @@
 
 <body>
     <header class="header">
-        <div class="header__wrap conteiner">
-            <nav class="header__nav">
-                <a class="logo" href="./index.html">
-                    <span class="logo__web">Web</span><span class="logo__studio">Studio</span>
-                </a>
+        <div class="conteiner header__wrap">
+            <a class="header__logo logo" href="./index.html">
+                <span class="logo__web">Web</span><span class="logo__studio">Studio</span>
+            </a>
+            <!-- =======КНОПКА ДЛЯ БУРГЕРА====== -->
+            <button type="button" class="burger is-open" aria-expanded="true" aria-controls="burger" data-menu-button>
+                <svg width="40px" height="40px" aria-label="Переключатель мобильного меню">
+                    <use class="icon-close" href="./img/icons.svg#close"></use>
+                    <use class="icon-menu" href="./img/icons.svg#menu"></use>
+                </svg>
+            </button>
 
-                <ul class="nav">
-                    <li class="nav__item"><a class="nav__link" href="./index.html">Студия</a></li>
-                    <li class="nav__item"><a class="nav__link  nav__link--current" href="./portfolio.html">Портфолио</a>
-                    </li>
-                    <li class="nav__item"><a class="nav__link" href="">Контакты</a></li>
+            <div class="menu-conteiner" id="menu-conteiner" data-menu>
+                <nav class="header__nav">
+                    <ul class="nav">
+                        <li class="nav__item"><a class="nav__link" href="./index.html">Студия</a>
+                        </li>
+                        <li class="nav__item"><a class="nav__link nav__link--current"
+                                href="./portfolio.html">Портфолио</a>
+                        </li>
+                        <li class="nav__item"><a class="nav__link" href="">Контакты</a></li>
+                    </ul>
+                </nav>
+                <ul class="contact">
+                    <li class="contact__item"><a class="contact__link mail" href="mailto:info@devstudio.com">
+                            <svg class="contact__icon-mail">
+                                <use href="./img/icons.svg#envelope"></use>
+                            </svg>info@devstudio.com</a></li>
+
+                    <li class="contact__item"><a class="contact__link tel" href="tel:+380961111111">
+                            <svg class="contact__icon-tel">
+                                <use href="./img/icons.svg#tel"></use>
+                            </svg>+38 096 111 11 11</a></li>
                 </ul>
-            </nav>
-
-            <ul class="contact">
-                <li class="contact__item"><a class="contact__link" href="mailto:info@devstudio.com">
-                        <svg class="contact__icon-mail">
-                            <use href="./img/icons.svg#envelope"></use>
-                        </svg>info@devstudio.com</a></li>
-
-                <li class="contact__item"><a class="contact__link" href="tel:+380961111111">
-                        <svg class="contact__icon-tel">
-                            <use href="./img/icons.svg#tel"></use>
-                        </svg>+38 096 111 11 11</a></li>
-            </ul>
+                <ul class="header__networks">
+                    <li><a class="link-text" href="https://twitter.com">Twitter</a></li>
+                    <li><a class="link-text" href="https://www.instagram.com">Instagram</a></li>
+                    <li><a class="link-text" href="https://www.facebook.com">Facebook</a></li>
+                    <li><a class="link-text" href="https://www.linkedin.com">LinkedIn</a></li>
+                </ul>
+            </div>
         </div>
     </header>
+
 
     <main>
         <!-- секция кнопок навигации -->
         <section class="filters">
-            <div>
+            <div class="button-wrap conteiner">
                 <h1 class="vissually-hidden">Наши работы</h1>
                 <ul class="filters__list">
                     <li"><button class="filters__button" type="button">Все</button> </li>
@@ -65,7 +82,9 @@
                 <ul class="project__list">
                     <li class="project__item">
                         <div class="card">
-                            <img class="card__img" src="./img/tehnokryak.jpg" alt="Технокряк">
+                            <img srcset="./img/portfolio/tehnokryak.jpg 370w, ./img/portfolio/tehnokryak@2x.jpg 740w"
+                                class="card__img" src="./img/tehnokryak.jpg" alt="Технокряк"
+                                sizes="(min-width: 1200px) 30vw, (min-width:768px) 50vw, 100vw">
                             <p class="card__text">Ресурс предлагает комплексные предложения с разным уровнем
                                 функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о
                                 компании или частном лице.</p>
@@ -78,8 +97,9 @@
                     </li>
                     <li class="project__item">
                         <div class="card">
-                            <img class="card__img" src="./img/new-orlean.jpg" alt="Постер New Orlean vs Golden Star"
-                                width="370px">
+                            <img srcset="./img/portfolio/new-orlean.jpg 370w, ./img/portfolio/new-orlean@2x.jpg 740w"
+                                class="card__img" src="./img/new-orlean.jpg" alt="Постер New Orlean vs Golden Star"
+                                sizes="(min-width: 1200px) 30vw, (min-width:768px) 50vw, 100vw">
                             <p class="card__text">Ресурс предлагает комплексные предложения с разным уровнем
                                 функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о
                                 компании или частном лице.</p>
@@ -92,8 +112,9 @@
 
                     <li class="project__item">
                         <div class="card">
-                            <img class="card__img" src="./img/restorant-seafood.jpg" alt="Ресторан Seafood"
-                                width="370px">
+                            <img srcset="./img/portfolio/restorant-seafood.jpg 370w, ./img/portfolio/restorant-seafood@2x.jpg 740w"
+                                class="card__img" src="./img/restorant-seafood.jpg" alt="Ресторан Seafood"
+                                sizes="(min-width: 1200px) 30vw, (min-width:768px) 50vw, 100vw">
                             <p class="card__text">Ресурс предлагает комплексные предложения с разным уровнем
                                 функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о
                                 компании или частном лице.</p>
@@ -106,7 +127,9 @@
 
                     <li class="project__item">
                         <div class="card">
-                            <img class="card__img" src="./img/project-prime.jpg" alt="Проект Prime" width="370px">
+                            <img srcset="./img/portfolio/project-prime.jpg 370w, ./img/portfolio/project-prime@2x.jpg 740w"
+                                class="card__img" src="./img/project-prime.jpg" alt="Проект Prime"
+                                sizes="(min-width: 1200px) 33vw, (min-width:768px) 50vw, 100vw">
                             <p class="card__text">Ресурс предлагает комплексные предложения с разным уровнем
                                 функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о
                                 компании или частном лице.</p>
@@ -119,7 +142,9 @@
 
                     <li class="project__item">
                         <div class="card">
-                            <img class="card__img" src="./img/project-boxes.jpg" alt="Проект Boxes" width="370px">
+                            <img srcset="./img/portfolio/project-boxes.jpg 370w, ./img/portfolio/project-boxes@2x.jpg 740w"
+                                class="card__img" src="./img/project-boxes.jpg" alt="Проект Boxes"
+                                sizes="(min-width: 1200px) 33vw, (min-width:768px) 50vw, 100vw">
                             <p class="card__text">Ресурс предлагает комплексные предложения с разным уровнем
                                 функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о
                                 компании или частном лице.</p>
@@ -132,8 +157,9 @@
 
                     <li class="project__item">
                         <div class="card">
-                            <img class="card__img" src="./img/inspiration- borders.jpg" alt="Inspiration has no Borders"
-                                width="370px">
+                            <img srcset="./img/portfolio/inspiration-borders.jpg 370w, ./img/portfolio/inspiration-borders@2x.jpg 740w"
+                                class="card__img" src="./img/inspiration-borders.jpg" alt="Inspiration has no Borders"
+                                sizes="(min-width: 1200px) 33vw, (min-width:768px) 50vw, 100vw">
                             <p class="card__text">Ресурс предлагает комплексные предложения с разным уровнем
                                 функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о
                                 компании или частном лице.</p>
@@ -146,8 +172,9 @@
 
                     <li class="project__item">
                         <div class="card">
-                            <img class="card__img" src="./img/limited-edition.jpg" alt="Издание Limited Edition"
-                                width="370px">
+                            <img srcset="./img/portfolio/limited-edition.jpg 370w, ./img/portfolio/limited-edition@2x.jpg 740w"
+                                class="card__img" src="./img/limited-edition.jpg" alt="Издание Limited Edition"
+                                sizes="(min-width: 1200px) 33vw, (min-width:768px) 50vw, 100vw">
                             <p class="card__text">Ресурс предлагает комплексные предложения с разным уровнем
                                 функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о
                                 компании или частном лице.</p>
@@ -160,7 +187,9 @@
 
                     <li class="project__item">
                         <div class="card">
-                            <img class="card__img" src="./img/project-lab.jpg" alt="Проект LAB" width="370px">
+                            <img srcset="./img/portfolio/project-lab.jpg 370w, ./img/portfolio/project-lab@2x.jpg 740w"
+                                class="card__img" src="./img/project-lab.jpg" alt="Проект LAB"
+                                sizes="(min-width: 1200px) 33vw, (min-width:768px) 50vw, 100vw">
                             <p class="card__text">Ресурс предлагает комплексные предложения с разным уровнем
                                 функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о
                                 компании или частном лице.</p>
@@ -173,8 +202,9 @@
 
                     <li class="project__item">
                         <div class="card">
-                            <img class="card__img" src="./img/growing-business.jpg" alt="Growing Business"
-                                width="370px">
+                            <img srcset="./img/portfolio/growing-business.jpg 370w, ./img/portfolio/growing-business@2x.jpg 740w"
+                                class="card__img" src="./img/growing-business.jpg" alt="Growing Business"
+                                sizes="(min-width: 1200px) 33vw, (min-width:768px) 50vw, 100vw">
                             <p class="card__text">Ресурс предлагает комплексные предложения с разным уровнем
                                 функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о
                                 компании или частном лице.</p>

@@ -5,8 +5,12 @@
 @import './utils/body-styles';
 @import './utils/placeholders';
 @import './utils/mixin';
+@import './components/conteiner';
 @import './components/header';
 @import './components/logo';
+// @import './components/header';
+// @import './components/logo';
 @import './components/project';
 @import './components/footer';
 @import './components/social-links';
+@import './components/burger';

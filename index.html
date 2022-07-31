@@ -33,7 +33,6 @@
             </button>
 
             <div class="menu-conteiner" id="menu-conteiner" data-menu>
-                <div class="nav"></div>
                 <nav class="header__nav">
                     <ul class="nav">
                         <li class="nav__item"><a class="nav__link nav__link--current" href="./index.html">Студия</a>
@@ -43,7 +42,6 @@
                         <li class="nav__item"><a class="nav__link" href="">Контакты</a></li>
                     </ul>
                 </nav>
-                <div class="contact"></div>
                 <ul class="contact">
                     <li class="contact__item"><a class="contact__link mail" href="mailto:info@devstudio.com">
                             <svg class="contact__icon-mail">
@@ -54,6 +52,12 @@
                             <svg class="contact__icon-tel">
                                 <use href="./img/icons.svg#tel"></use>
                             </svg>+38 096 111 11 11</a></li>
+                </ul>
+                <ul class="header__networks">
+                    <li><a class="link-text" href="https://twitter.com">Twitter</a></li>
+                    <li><a class="link-text" href="https://www.instagram.com">Instagram</a></li>
+                    <li><a class="link-text" href="https://www.facebook.com">Facebook</a></li>
+                    <li><a class="link-text" href="https://www.linkedin.com">LinkedIn</a></li>
                 </ul>
             </div>
         </div>
@@ -146,7 +150,8 @@
                 <h2 class="team__title">Наша команда</h2>
                 <ul class="team__list">
                     <li class="team__card">
-                        <img src="./img/igor.jpg" alt="фото Игоря" width="270px">
+                        <img srcset="./img/staff/igor.jpg 1x, ./img/staff/igor@2x.jpg 2x" src="./img/staff/igor.jpg"
+                            alt="фото Игоря" sizes="(min-width: 1200px) 25vw, (min-width:768px) 50vw, 100vw">
                         <div class="staff">
                             <h3 class="staff__name">Игорь Демьяненко</h3>
                             <p class="staff__position">Product Designer</p>
@@ -192,7 +197,8 @@
                     </li>
 
                     <li class="team__card">
-                        <img src="./img/olga.jpg" alt="фото Ольги" width="270">
+                        <img srcset="./img/staff/olga.jpg 1x, ./img/staff/olga@2x.jpg 2x" src="./img/olga.jpg"
+                            alt="фото Ольги" sizes="(min-width: 1200px) 25vw, (min-width:768px) 50vw, 100vw">
                         <div class="staff">
                             <h3 class="staff__name">Ольга Репина</h3>
                             <p class="staff__position">Frontend Developer</p>
@@ -238,7 +244,8 @@
                     </li>
 
                     <li class="team__card">
-                        <img src="./img/nikolai.jpg" alt="фото Николая" width="270">
+                        <img srcset="./img/staff/nikolai.jpg 1x, ./img/staff/nikolai@2x.jpg 2x" src="./img/nikolai.jpg"
+                            alt="фото Николая" sizes="(min-width: 1200px) 25vw, (min-width:768px) 50vw, 100vw">
                         <div class="staff">
                             <h3 class="staff__name">Николай Тарасов</h3>
                             <p class="staff__position">Marketing</p>
@@ -284,7 +291,8 @@
                     </li>
 
                     <li class="team__card">
-                        <img src="./img/mihail.jpg" alt="фото Михаила" width="270">
+                        <img srcset="./img/staff/mihail.jpg 1x, ./img/staff/mihail2x.jpg 2x" src="./img/mihail.jpg"
+                            alt="фото Михаила" sizes="(min-width: 1200px) 25vw, (min-width:768px) 50vw, 100vw">
                         <div class="staff">
                             <h3 class="staff__name">Михаил Ермаков</h3>
                             <p class="staff__position">UI Designer</p>

@@ -16,9 +16,38 @@
     padding-bottom: 25px;
   }
 
-  // &__nav {
-  //   // @include flex($dis: flex, $ai: center, $jc: space-between);
-  // }
+  &__wrap {
+    @media screen and(min-width:768px) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    @media screen and(min-width:1200px) {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+  }
+  &__networks {
+    display: flex;
+    align-items: center;
+
+    @extend %list;
+    @extend %link;
+
+    margin-top: 64px;
+    margin-bottom: 48px;
+    gap: 20px;
+
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
+  }
+  &__nav {
+    @media screen and (min-width: 768px) {
+      margin-right: 75px;
+    }
+  }
 }
 
 /* стиль навигации */
@@ -29,34 +58,51 @@
   flex-direction: column;
   align-items: flex-start;
 
-  padding-left: 40px;
   gap: 50px;
 
   font-weight: 500;
   font-size: 40px;
   line-height: 1.17;
   letter-spacing: 0.02em;
-  // стиль для таблетки и компа===
 
-  // font-size: 14px;
-  // line-height: 1.14;
+  @media screen and (min-width: 768px) {
+    font-size: 14px;
+    line-height: 1.14;
+
+    flex-direction: row;
+  }
+  &__link:hover,
+  &__link:focus {
+    color: $accent-color;
+  }
 }
 .contact {
   @extend %list;
 
   display: flex;
   flex-direction: column-reverse;
-
   margin-top: 306px;
-  padding-left: 40px;
 
-  // margin-left: 93px;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   text-decoration: none;
 
+  @media screen and (min-width: 768px) {
+    margin-top: 0px;
+    flex-direction: column;
+    font-size: 12px;
+  }
+  @media screen and (min-width: 1200px) {
+    flex-direction: row;
+  }
+
+  &__item {
+    @media screen and (min-width: 1200px) {
+      gap: 30px;
+    }
+  }
   &__link:hover,
   &__link:focus {
     color: $accent-color;
@@ -73,13 +119,14 @@
 .nav__link--current {
   color: $accent-color;
 }
-@media screen and(min-width:768px) {
-  .nav__link--current::after {
+
+.nav__link--current::after {
+  @media screen and (min-width: 768px) {
     content: '';
 
     position: absolute;
 
-    bottom: -32px;
+    bottom: -250%;
     display: block;
     width: 100%;
     height: 4px;
@@ -93,26 +140,44 @@
   gap: 30px;
   margin-left: auto;
 
-  &__icon-mail,
-  &__icon-tel {
-    width: 16px;
-    height: 12px;
-    fill: currentColor;
-    margin-right: 10px;
-
-    transition: fill var(--main-transformation);
-  }
-
-  &__icon-tel {
-    width: 10px;
-    height: 16px;
-  }
-
-  &__icon-mail:hover,
-  &__icon-tel:hover {
-    fill: $accent-color;
+  @media screen and (min-width: 768px) {
+    gap: 8px;
   }
 }
+.contact__icon-mail,
+.contact__icon-tel {
+  // @media screen and (max-width: 767px) {
+  //   display: none;
+  // }
+  fill: currentColor;
+  margin-right: 8px;
+  @media screen and (min-width: 1200px) {
+    gap: 10px;
+  }
+
+  transition: fill var(--main-transformation);
+}
+.contact__icon-mail {
+  @media screen and (min-width: 1200px) {
+    width: 16px;
+    height: 12px;
+  }
+  width: 14px;
+  height: 10px;
+}
+.contact__icon-tel {
+  @media screen and (min-width: 1200px) {
+    height: 16px;
+  }
+  width: 10px;
+  height: 14px;
+}
+
+// &__icon-mail:hover,
+// &__icon-tel:hover {
+//     fill: $accent-color;
+//   }
+
 .contact__link {
   @extend %link;
   font-weight: 500;
@@ -121,11 +186,46 @@
 
   &.tel {
     font-size: 34px;
-
     color: $accent-color;
+
+    @media screen and (min-width: 768px) {
+      font-size: 12px;
+      color: $second-text-color;
+    }
   }
   &.mail {
     font-size: 24px;
     color: $second-text-color;
+
+    @media screen and (min-width: 768px) {
+      font-size: 12px;
+    }
+  }
+}
+.link-text {
+  position: relative;
+
+  gap: 20px;
+
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+
+  color: $accent-color;
+
+  &::after {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(100%);
+
+    display: block;
+
+    height: 22px;
+    width: 1px;
+    background-color: red;
   }
 }

@@ -17,15 +17,19 @@
   }
   &__list {
     @extend %list;
-    margin: -15px;
+
     display: flex;
     flex-wrap: wrap;
+    gap: 30px;
+
+    @media screen and(min-width:768px) {
+      margin: -15px;
+      gap: 0px;
+    }
 
     @media screen and(min-width:1200px) {
       flex-wrap: nowrap;
     }
-    // @include centeredFlex($type: flex);
-    // gap: 30px;
   }
   &__card {
     background-color: $header-color;
