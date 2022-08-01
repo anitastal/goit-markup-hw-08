@@ -13,7 +13,7 @@
 %section {
   padding: 60px 0px;
 
-  @media screen and(min-width:768px) {
+  @media screen and (min-width: 768px) {
     padding: 94px 0px;
   }
 }
@@ -49,5 +49,6 @@
   color: $main-text-color;
   background-color: $background-button;
 
-  transition: color var(--main-transformation), background-color var(--main-transformation);
+  transition: color var(--main-transformation),
+    background-color var(--main-transformation);
 }

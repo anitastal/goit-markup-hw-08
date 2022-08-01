@@ -3,7 +3,7 @@
   top: 0;
   right: 0;
   transform: translate(-50%, 25%);
-  display: inline-flex;
+  display: flex;
   margin: 0;
   padding: 0;
   border: none;
@@ -18,17 +18,25 @@
   &.is-open .icon-menu {
     display: block;
   }
+  // стиль для таблетки и дальше
   @media screen and(min-width:768px) {
     display: none;
   }
 }
+// меню контейнера навигации по сайту
 .menu-conteiner {
+  @include tablet {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
   background-color: aquamarine;
 
   &.is-open {
     display: block;
     padding-left: 40px;
   }
+  //  стиль для мобилки
   @media screen and(max-width:767px) {
     display: none;
     position: absolute;
@@ -36,12 +44,14 @@
     left: 0;
     width: 100%;
   }
+  // стиль для таблетки
   @media screen and(min-width:768px) {
     display: flex;
     align-items: center;
     width: 100%;
     margin-left: 88px;
   }
+  // стиль для ноута
   @media screen and(min-width:1200px) {
     margin-left: 93px;
   }

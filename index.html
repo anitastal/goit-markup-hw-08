@@ -54,10 +54,10 @@
                             </svg>+38 096 111 11 11</a></li>
                 </ul>
                 <ul class="header__networks">
-                    <li><a class="link-text" href="https://twitter.com">Twitter</a></li>
-                    <li><a class="link-text" href="https://www.instagram.com">Instagram</a></li>
-                    <li><a class="link-text" href="https://www.facebook.com">Facebook</a></li>
-                    <li><a class="link-text" href="https://www.linkedin.com">LinkedIn</a></li>
+                    <li class="item"><a class="link-text" href="https://twitter.com">Twitter</a></li>
+                    <li class="item"><a class="link-text" href="https://www.instagram.com">Instagram</a></li>
+                    <li class="item"><a class="link-text" href="https://www.facebook.com">Facebook</a></li>
+                    <li class="item"><a class="link-text" href="https://www.linkedin.com">LinkedIn</a></li>
                 </ul>
             </div>
         </div>
@@ -131,13 +131,28 @@
             <div class="work__wrap conteiner">
                 <h2 class="work__title">Чем мы занимаемся</h2>
                 <ul class="work__list">
-                    <li class="work__item"><img src="./img/computer.jpg" alt="компьютер" width="370">
+                    <li class="work__item">
+                        <picture>
+                            <source srcset="./img/work/work-1-comp.jpg 1x, 
+                            ./img/work/work-1-comp@2x.jpg 2x" media="(min-width:1200px)">
+                        </picture>
+                        <img src="./img/work/work-1-comp.jpg" alt="компьютер" width="370">
                         <p class="work__label">Декстопные приложения</p>
                     </li>
-                    <li class="work__item"><img src="./img/telephone.jpg" alt="телефон" width="370">
+
+                    <li class="work__item">
+                        <picture>
+                            <source srcset="./img/work/work-2-comp.jpg 1x, 
+                                                    ./img/work/work-2-comp@2x.jpg 2x" media="(min-width:1200px)">
+                        </picture>
+                        <img src="./img/work/work-2-comp.jpg" alt="телефон" width="370">
                         <p class="work__label">Мобильные приложения</p>
                     </li>
-                    <li class="work__item"><img src="./img/laptop.jpg" alt="лептоп" width="370">
+                    <li class="work__item">
+                        <picture>
+                            <source srcset="./img/work/work-3-comp.jpg 1x, 
+                                            ./img/work/work-3-comp@2x.jpg 2x" media="(min-width:1200px)">
+                        </picture><img src="./img/work/work-3-comp.jpg" alt="лептоп" width="370">
                         <p class="work__label">Дизайнерские решения</p>
                     </li>
                 </ul>
@@ -150,8 +165,15 @@
                 <h2 class="team__title">Наша команда</h2>
                 <ul class="team__list">
                     <li class="team__card">
-                        <img srcset="./img/staff/igor.jpg 1x, ./img/staff/igor@2x.jpg 2x" src="./img/staff/igor.jpg"
-                            alt="фото Игоря" sizes="(min-width: 1200px) 25vw, (min-width:768px) 50vw, 100vw">
+                        <picture>
+                            <source srcset="./img/team/team-1-mob.jpg 1x,
+                             ./img/team/team-1-mob@2x.jpg 2x" media="(min-width: 320px)" />
+                            <source srcset="./img/team/team-1-tablet.jpg 1x,
+                            ./img/team/team-1-tablet@2x.jpg 2x" media="(min-width: 768px)" />
+                            <source srcset="./img/team/team-1-comp.jpg 1x,
+                            ./img/team/team-1-comp@2x.jpg 2x" media="(min-width: 1200px)" />
+                        </picture>
+                        <img src="./img/team/team-1-mob.jpg" alt="фото Игоря">
                         <div class="staff">
                             <h3 class="staff__name">Игорь Демьяненко</h3>
                             <p class="staff__position">Product Designer</p>
@@ -197,8 +219,15 @@
                     </li>
 
                     <li class="team__card">
-                        <img srcset="./img/staff/olga.jpg 1x, ./img/staff/olga@2x.jpg 2x" src="./img/olga.jpg"
-                            alt="фото Ольги" sizes="(min-width: 1200px) 25vw, (min-width:768px) 50vw, 100vw">
+                        <picture>
+                            <source srcset="./img/team/team-2-mob.jpg 1x,
+                                                    ./img/team/team-2-mob@2x.jpg 2x" media="(min-width: 320px)" />
+                            <source srcset="./img/team/team-2-tablet.jpg 1x,
+                                                    ./img/team/team-2-tablet@2x.jpg 2x" media="(min-width: 768px)" />
+                            <source srcset="./img/team/team-2-comp.jpg 1x,
+                                                    ./img/team/team-2-comp@2x.jpg 2x" media="(min-width: 1200px)" />
+                        </picture>
+                        <img src="./img/team/team-2-mob.jpg" alt="фото Ольги">
                         <div class="staff">
                             <h3 class="staff__name">Ольга Репина</h3>
                             <p class="staff__position">Frontend Developer</p>
@@ -244,8 +273,15 @@
                     </li>
 
                     <li class="team__card">
-                        <img srcset="./img/staff/nikolai.jpg 1x, ./img/staff/nikolai@2x.jpg 2x" src="./img/nikolai.jpg"
-                            alt="фото Николая" sizes="(min-width: 1200px) 25vw, (min-width:768px) 50vw, 100vw">
+                        <picture>
+                            <source srcset="./img/team/team-3-mob.jpg 1x,
+                                                     ./img/team/team-3-mob@2x.jpg 2x" media="(min-width: 320px)" />
+                            <source srcset="./img/team/team-3-tablet.jpg 1x,
+                                                    ./img/team/team-3-tablet@2x.jpg 2x" media="(min-width: 768px)" />
+                            <source srcset="./img/team/team-3-comp.jpg 1x,
+                                                    ./img/team/team-3-comp@2x.jpg 2x" media="(min-width: 1200px)" />
+                        </picture>
+                        <img src="./img/team/team-3-mob.jpg" alt="фото Николая">
                         <div class="staff">
                             <h3 class="staff__name">Николай Тарасов</h3>
                             <p class="staff__position">Marketing</p>
@@ -291,8 +327,15 @@
                     </li>
 
                     <li class="team__card">
-                        <img srcset="./img/staff/mihail.jpg 1x, ./img/staff/mihail2x.jpg 2x" src="./img/mihail.jpg"
-                            alt="фото Михаила" sizes="(min-width: 1200px) 25vw, (min-width:768px) 50vw, 100vw">
+                        <picture>
+                            <source srcset="./img/team/team-4-mob.jpg 1x,
+                                                     ./img/team/team-4-mob@2x.jpg 2x" media="(min-width: 320px)" />
+                            <source srcset="./img/team/team-4-tablet.jpg 1x,
+                                                    ./img/team/team-4-tablet@2x.jpg 2x" media="(min-width: 768px)" />
+                            <source srcset="./img/team/team-4-comp.jpg 1x,
+                                                    ./img/team/team-4-comp@2x.jpg 2x" media="(min-width: 1200px)" />
+                        </picture>
+                        <img src="./img/team/team-4-mob.jpg" alt="фото Михаила">
                         <div class="staff">
                             <h3 class="staff__name">Михаил Ермаков</h3>
                             <p class="staff__position">UI Designer</p>
