@@ -1,58 +1,56 @@
 .burger {
-  position: absolute;
-  top: 0;
-  right: 0;
-  transform: translate(-50%, 25%);
-  display: flex;
-  margin: 0;
+  @media screen and(min-width:767px) {
+    display: none;
+  }
+  margin-left: auto;
   padding: 0;
   border: none;
   background-color: transparent;
-
-  & .icon-menu {
-    display: none;
-  }
-  &.is-open .icon-close {
-    display: none;
-  }
-  &.is-open .icon-menu {
-    display: block;
-  }
-  // стиль для таблетки и дальше
-  @media screen and(min-width:768px) {
-    display: none;
-  }
+  z-index: 2;
 }
-// меню контейнера навигации по сайту
+.burger .icon-menu {
+  display: none;
+}
+.burger.is-open .icon-menu {
+  display: block;
+}
+.burger.is-open .icon-close {
+  display: none;
+}
+.burger:hover .icon-menu,
+.burger:focus .icon-menu,
+.burger:hover .icon-close,
+.burger:focus .icon-close {
+  fill: $accent-color;
+}
 .menu-conteiner {
-  @include tablet {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  background-color: aquamarine;
-
-  &.is-open {
-    display: block;
-    padding-left: 40px;
-  }
-  //  стиль для мобилки
+  // стиль для мобильного
   @media screen and(max-width:767px) {
     display: none;
-    position: absolute;
-    top: 100%;
+    position: fixed;
+    top: 0;
     left: 0;
-    width: 100%;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    background-color: $header-color;
+    padding: 48px 40px;
+    text-align: left;
   }
-  // стиль для таблетки
-  @media screen and(min-width:768px) {
+}
+.menu-conteiner.is-open {
+  display: block;
+}
+.menu-conteiner__wrap {
+  // стиль для телефона
+  @media screen and(max-width:767px) {
     display: flex;
-    align-items: center;
-    width: 100%;
-    margin-left: 88px;
+    height: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
   }
-  // стиль для ноута
-  @media screen and(min-width:1200px) {
-    margin-left: 93px;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }

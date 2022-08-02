@@ -13,9 +13,13 @@
   }
 
   &__wrap {
+    display: flex;
+    align-items: center;
+
     @include tablet {
       display: flex;
       align-items: center;
+      justify-content: space-between;
     }
   }
   &__networks {
@@ -26,13 +30,12 @@
     @extend %link;
 
     margin-top: 64px;
-    margin-bottom: 48px;
 
     @include tablet {
       display: none;
     }
     & .item:not(:last-child) {
-      border-right: 4px solid green;
+      border-right: 1px solid $imput-color;
       padding-right: 10px;
     }
     & .item:not(:first-child) {
@@ -59,8 +62,13 @@
     display: flex;
     flex-direction: row;
 
+    margin-right: 84px;
+
     font-size: 14px;
     line-height: 1.14;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-right: 305px;
   }
   &__link {
     @extend %link;
@@ -106,7 +114,6 @@
   display: flex;
   flex-direction: column-reverse;
 
-  margin-top: 306px;
   gap: 30px;
 
   font-weight: 500;

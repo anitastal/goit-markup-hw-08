@@ -25,40 +25,46 @@
                 <span class="logo__web">Web</span><span class="logo__studio">Studio</span>
             </a>
             <!-- =======КНОПКА ДЛЯ БУРГЕРА====== -->
-            <button type="button" class="burger is-open" aria-expanded="true" aria-controls="burger" data-menu-button>
+            <button type="button" class="burger is-open" aria-expanded="false" aria-controls="menu-conteiner"
+                data-menu-button>
                 <svg width="40px" height="40px" aria-label="Переключатель мобильного меню">
-                    <use class="icon-close" href="./img/icons.svg#close"></use>
-                    <use class="icon-menu" href="./img/icons.svg#menu"></use>
+                    <use class="burger__icon icon-close" href="./img/icons.svg#close"></use>
+                    <use class="burger__icon icon-menu" href="./img/icons.svg#menu"></use>
                 </svg>
             </button>
 
             <div class="menu-conteiner" id="menu-conteiner" data-menu>
-                <nav class="header__nav">
-                    <ul class="nav">
-                        <li class="nav__item"><a class="nav__link nav__link--current" href="./index.html">Студия</a>
-                        </li>
-                        <li class="nav__item"><a class="nav__link" href="./portfolio.html">Портфолио</a>
-                        </li>
-                        <li class="nav__item"><a class="nav__link" href="">Контакты</a></li>
-                    </ul>
-                </nav>
-                <ul class="contact">
-                    <li class="contact__item"><a class="contact__link mail" href="mailto:info@devstudio.com">
-                            <svg class="contact__icon-mail">
-                                <use href="./img/icons.svg#envelope"></use>
-                            </svg>info@devstudio.com</a></li>
+                <div class="menu-conteiner__wrap">
+                    <nav class="header__nav">
+                        <ul class="nav">
+                            <li class="nav__item"><a class="nav__link nav__link--current" href="./index.html">Студия</a>
+                            </li>
+                            <li class="nav__item"><a class="nav__link" href="./portfolio.html">Портфолио</a>
+                            </li>
+                            <li class="nav__item"><a class="nav__link" href="">Контакты</a></li>
+                        </ul>
+                    </nav>
 
-                    <li class="contact__item"><a class="contact__link tel" href="tel:+380961111111">
-                            <svg class="contact__icon-tel">
-                                <use href="./img/icons.svg#tel"></use>
-                            </svg>+38 096 111 11 11</a></li>
-                </ul>
-                <ul class="header__networks">
-                    <li class="item"><a class="link-text" href="https://twitter.com">Twitter</a></li>
-                    <li class="item"><a class="link-text" href="https://www.instagram.com">Instagram</a></li>
-                    <li class="item"><a class="link-text" href="https://www.facebook.com">Facebook</a></li>
-                    <li class="item"><a class="link-text" href="https://www.linkedin.com">LinkedIn</a></li>
-                </ul>
+                    <div class="contact-wrap">
+                        <ul class="contact">
+                            <li class="contact__item"><a class="contact__link mail" href="mailto:info@devstudio.com">
+                                    <svg class="contact__icon-mail">
+                                        <use href="./img/icons.svg#envelope"></use>
+                                    </svg>info@devstudio.com</a></li>
+
+                            <li class="contact__item"><a class="contact__link tel" href="tel:+380961111111">
+                                    <svg class="contact__icon-tel">
+                                        <use href="./img/icons.svg#tel"></use>
+                                    </svg>+38 096 111 11 11</a></li>
+                        </ul>
+                        <ul class="header__networks">
+                            <li class="item"><a class="link-text" href="https://twitter.com">Twitter</a></li>
+                            <li class="item"><a class="link-text" href="https://www.instagram.com">Instagram</a></li>
+                            <li class="item"><a class="link-text" href="https://www.facebook.com">Facebook</a></li>
+                            <li class="item"><a class="link-text" href="https://www.linkedin.com">LinkedIn</a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </header>
