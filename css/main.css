@@ -289,14 +289,14 @@ img {
   text-decoration: none;
 }
 
-.contact__link, .nav__link, .header__networks {
+.address__link, .contact__link, .nav__link, .header__networks {
   text-decoration: none;
 }
 
 .footer, .clients, .team, .work, .features, .hero {
   padding: 60px 0px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
   .footer, .clients, .team, .work, .features, .hero {
     padding: 94px 0px;
   }
@@ -786,10 +786,6 @@ img {
   background-color: #2196f3;
 }
 
-.features {
-  padding-top: 60px;
-  padding-bottom: 60px;
-}
 @media sreen and (min-width: 768px) {
   .features {
     display: -webkit-box;
@@ -801,6 +797,12 @@ img {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .features {
+    padding-top: 94px;
+    padding-bottom: 0px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -867,6 +869,11 @@ img {
   text-align: center;
   text-transform: uppercase;
 }
+@media screen and (min-width: 1200px) {
+  .features__title {
+    text-align: left;
+  }
+}
 .features__text {
   margin-top: 0;
   margin-bottom: 0;
@@ -903,6 +910,8 @@ img {
       -ms-flex-pack: center;
           justify-content: center;
   gap: 30px;
+  margin: 0;
+  padding: 0;
 }
 .work__item {
   position: relative;
@@ -948,11 +957,17 @@ img {
 }
 .team__title {
   margin-top: 0;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   font-weight: 700;
-  font-size: 36px;
+  font-size: 28px;
   line-height: 1.17;
   text-align: center;
+}
+@media screen and (min-width: 1200px) {
+  .team__title {
+    font-size: 36px;
+    margin-bottom: 50px;
+  }
 }
 .team__list {
   display: -webkit-box;
@@ -1013,11 +1028,17 @@ img {
 
 .clients__title {
   margin-top: 0;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   font-weight: 700;
-  font-size: 36px;
+  font-size: 28px;
   line-height: 1.17;
   text-align: center;
+}
+@media screen and (min-width: 1200px) {
+  .clients__title {
+    font-style: 36px;
+    margin-bottom: 50px;
+  }
 }
 .clients__list {
   display: -webkit-box;
@@ -1141,11 +1162,10 @@ img {
   margin-top: 20px;
   text-decoration: none;
 }
-.address__item::not(:last-child) {
+.address__item:not(:last-child) {
   margin-bottom: 9px;
 }
 .address__link {
-  margin-bottom: 9px;
   color: rgba(255, 255, 255, 0.6);
 }
 .address__link--place {
@@ -1227,11 +1247,16 @@ img {
   margin: 0;
   padding-left: 16px;
   height: 50px;
-  width: 358px;
+  width: 100%;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
   color: #ffffff;
   background-color: #2f303a;
+}
+@media screen and (min-width: 768px) {
+  .form__input {
+    width: 358px;
+  }
 }
 .form__button {
   display: -webkit-inline-box;
@@ -1366,15 +1391,16 @@ img {
 }
 
 .modal {
+  position: relative;
   padding: 40px;
-  min-width: 450px;
-  min-height: 609px;
+  max-width: 450px;
+  max-height: 609px;
   border-radius: 4px;
   background-color: #ffffff;
   -webkit-box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
           box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 479px) {
   .modal {
     max-width: 100vw;
   }
@@ -1386,6 +1412,12 @@ img {
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
+  }
+}
+@media screen and (min-width: 768px) {
+  .modal {
+    min-width: 450px;
+    min-height: 609px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1503,10 +1535,15 @@ img {
       -ms-flex-pack: center;
           justify-content: center;
   margin-top: 20px;
-  font-size: 14px;
+  font-size: 12px;
   letter-spacing: 0.03em;
   text-align: center;
   color: rgb(117, 117, 117);
+}
+@media screen and (min-width: 1200px) {
+  .form__deal {
+    font-size: 14px;
+  }
 }
 .form__link {
   margin-left: 5px;
@@ -1540,6 +1577,7 @@ img {
   min-height: 40px;
   padding-left: 42px;
   width: 100%;
+  margin-bottom: 10px;
 }
 
 .checkbox {

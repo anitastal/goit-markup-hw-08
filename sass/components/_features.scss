@@ -1,10 +1,14 @@
 .features {
   @extend %section;
-  padding-top: 60px;
-  padding-bottom: 60px;
+  // padding-top: 60px;
+  // padding-bottom: 60px;
 
   @media sreen and (min-width: 768px) {
     @include flex($dis: flex, $ai: center, $jc: center);
+  }
+  @include comp {
+    padding-top: 94px;
+    padding-bottom: 0px;
   }
 
   &__list {
@@ -70,6 +74,10 @@
 
     text-align: center;
     text-transform: uppercase;
+
+    @include comp {
+      text-align: left;
+    }
   }
 
   &__text {

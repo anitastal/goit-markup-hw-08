@@ -57,12 +57,12 @@
     @extend %list;
   }
 
-  &__item::not(:last-child) {
+  &__item:not(:last-child) {
     margin-bottom: 9px;
   }
 
   &__link {
-    margin-bottom: 9px;
+    @extend %link;
     color: $footer-text-color;
   }
 
@@ -132,11 +132,15 @@
     margin: 0;
     padding-left: 16px;
     height: 50px;
-    width: 358px;
+    width: 100%;
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 4px;
     color: $header-color;
     background-color: $footer-bgcolor;
+
+    @include tablet {
+      width: 358px;
+    }
   }
 
   &__button {
