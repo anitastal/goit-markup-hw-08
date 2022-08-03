@@ -1,7 +1,5 @@
 .features {
   @extend %section;
-  // padding-top: 60px;
-  // padding-bottom: 60px;
 
   @media sreen and (min-width: 768px) {
     @include flex($dis: flex, $ai: center, $jc: center);
@@ -75,7 +73,7 @@
     text-align: center;
     text-transform: uppercase;
 
-    @include comp {
+    @include tablet {
       text-align: left;
     }
   }

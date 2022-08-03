@@ -434,7 +434,8 @@ img {
 }
 @media screen and (min-width: 1200px) {
   .nav {
-    margin-right: 305px;
+    margin-left: 93px;
+    margin-right: 273px;
   }
 }
 .nav__link {
@@ -869,7 +870,7 @@ img {
   text-align: center;
   text-transform: uppercase;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
   .features__title {
     text-align: left;
   }

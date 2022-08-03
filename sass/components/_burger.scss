@@ -37,13 +37,6 @@
     padding: 48px 40px;
     text-align: left;
   }
-  // стиль ля таблетки
-  // @include tablet {
-  //   display: flex;
-  //   align-items: center;
-  //   width: 100%;
-  //   margin-left: 88px;
-  // }
 }
 .menu-conteiner.is-open {
   display: block;

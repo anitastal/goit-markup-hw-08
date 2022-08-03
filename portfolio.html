@@ -76,31 +76,34 @@
             <div class="button-wrap conteiner">
                 <h1 class="vissually-hidden">Наши работы</h1>
                 <ul class="filters__list">
-                    <li"><button class="filters__button" type="button">Все</button> </li>
-                        <li"><button class="filters__button" type="button">Веб-сайты</button></li>
-                            <li"><button class="filters__button" type="button">Приложения</button></li>
-                                <li"><button class="filters__button" type="button">Дизайн</button></li>
-                                    <li"><button class="filters__button" type="button">Маркетинг</button></li>
+                    <li class="filters__item"><button class="filters__button" type="button">Все</button> </li>
+                    <li class="filters__item"><button class="filters__button" type="button">Веб-сайты</button></li>
+                    <li class="filters__item"><button class="filters__button" type="button">Приложения</button></li>
+                    <li class="filters__item"><button class="filters__button" type="button">Дизайн</button></li>
+                    <li class="filters__item"><button class="filters__button" type="button">Маркетинг</button></li>
                 </ul>
             </div>
             <!-- проэкты -->
             <div class="conteiner">
                 <ul class="project__list">
                     <li class="project__item">
-                        <picture>
-                            <source srcset="./img/portfolio/portfolio-1-comp.jpg 1x, 
-                                            ./img/portfolio/portfolio-1-comp@2x.jpg 2x" media="(min-width: 1200px)" />
-                            <source srcset="./img/portfolio/portfolio-1-tablet.jpg 1x, 
-                                            ./img/portfolio/portfolio-1-tablet@2x.jpg 2x" media="(min-width: 768px)" />
-                            <source srcset="./img/portfolio/portfolio-1-mob.jpg 1x, 
-                                            ./img/portfolio/portfolio-1-mob@2x.jpg 2x" media="(min-width: 320px)" />
-                        </picture>
                         <div class="card">
-                            <img class="card__img" src="./img/portfolio/portfolio-1-mob.jpg" alt="Технокряк">
+                            <picture>
+                                <source srcset="./img/portfolio/portfolio-1-comp.jpg 1x, 
+                                            ./img/portfolio/portfolio-1-comp@2x.jpg 2x" media="(min-width: 1200px)" />
+                                <source srcset="./img/portfolio/portfolio-1-tablet.jpg 1x, 
+                                            ./img/portfolio/portfolio-1-tablet@2x.jpg 2x" media="(min-width: 768px)" />
+                                <source srcset="./img/portfolio/portfolio-1-mob.jpg 1x, 
+                                            ./img/portfolio/portfolio-1-mob@2x.jpg 2x" media="(min-width: 320px)" />
+                                <img class="card__img" src="./img/portfolio/portfolio-1-mob.jpg" alt="Технокряк">
+                            </picture>
                             <p class="card__text">Ресурс предлагает комплексные предложения с разным уровнем
-                                функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о
+                                функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения
+                                о
                                 компании или частном лице.</p>
                         </div>
+
+
                         <div class="project__name">
                             <h2 class="project__title">Технокряк</h2>
                             <p class="project__nav">Веб-сайт</p>
@@ -119,9 +122,9 @@
                                 <source srcset="./img/portfolio/portfolio-2-mob.jpg 1x, 
                                                 ./img/portfolio/portfolio-2-mob@2x.jpg 2x"
                                     media="(min-width: 320px)" />
+                                <img class="card__img" src="./img/portfolio/portfolio-2-mob.jpg"
+                                    alt="Постер New Orlean vs Golden Star">
                             </picture>
-                            <img class="card__img" src="./img/portfolio/portfolio-2-mob.jpg"
-                                alt="Постер New Orlean vs Golden Star">
                             <p class="card__text">Ресурс предлагает комплексные предложения с разным уровнем
                                 функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о
                                 компании или частном лице.</p>
@@ -144,8 +147,9 @@
                                 <source srcset="./img/portfolio/portfolio-3-mob.jpg 1x, 
                                                 ./img/portfolio/portfolio-3-mob@2x.jpg 2x"
                                     media="(min-width: 320px)" />
+
+                                <img class="card__img" src="./img/portfolio/portfolio-3-mob.jpg" alt="Ресторан Seafood">
                             </picture>
-                            <img class="card__img" src="./img/portfolio/portfolio-3-mob.jpg" alt="Ресторан Seafood">
                             <p class="card__text">Ресурс предлагает комплексные предложения с разным уровнем
                                 функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о
                                 компании или частном лице.</p>
@@ -168,8 +172,8 @@
                                 <source srcset="./img/portfolio/portfolio-4-mob.jpg 1x, 
                                                 ./img/portfolio/portfolio-4-mob@2x.jpg 2x"
                                     media="(min-width: 320px)" />
+                                <img class="card__img" src="./img/portfolio/portfolio-4-mob.jpg" alt="Проект Prime">
                             </picture>
-                            <img class="card__img" src="./img/portfolio/portfolio-4-mob.jpg" alt="Проект Prime">
                             <p class="card__text">Ресурс предлагает комплексные предложения с разным уровнем
                                 функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о
                                 компании или частном лице.</p>
@@ -192,8 +196,8 @@
                                 <source srcset="./img/portfolio/portfolio-5-mob.jpg 1x, 
                                                 ./img/portfolio/portfolio-5-mob@2x.jpg 2x"
                                     media="(min-width: 320px)" />
+                                <img class="card__img" src="./img/portfolio/portfolio-5-mob.jpg" alt="Проект Boxes">
                             </picture>
-                            <img class="card__img" src="./img/portfolio/portfolio-5-mob.jpg" alt="Проект Boxes">
                             <p class="card__text">Ресурс предлагает комплексные предложения с разным уровнем
                                 функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о
                                 компании или частном лице.</p>
@@ -216,9 +220,9 @@
                                 <source srcset="./img/portfolio/portfolio-6-mob.jpg 1x, 
                                                 ./img/portfolio/portfolio-6-mob@2x.jpg 2x"
                                     media="(min-width: 320px)" />
+                                <img class="card__img" src="./img/portfolio/portfolio-6-mob.jpg"
+                                    alt="Inspiration has no Borders">
                             </picture>
-                            <img class="card__img" src="./img/portfolio/portfolio-6-mob.jpg"
-                                alt="Inspiration has no Borders">
                             <p class="card__text">Ресурс предлагает комплексные предложения с разным уровнем
                                 функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о
                                 компании или частном лице.</p>
@@ -241,9 +245,10 @@
                                 <source srcset="./img/portfolio/portfolio-7-mob.jpg 1x, 
                                                 ./img/portfolio/portfolio-7-mob@2x.jpg 2x"
                                     media="(min-width: 320px)" />
+
+                                <img class="card__img" src="./img/portfolio/portfolio-7-mob.jpg"
+                                    alt="Издание Limited Edition">
                             </picture>
-                            <img class="card__img" src="./img/portfolio/portfolio-7-mob.jpg"
-                                alt="Издание Limited Edition">
                             <p class="card__text">Ресурс предлагает комплексные предложения с разным уровнем
                                 функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о
                                 компании или частном лице.</p>
@@ -266,8 +271,8 @@
                                 <source srcset="./img/portfolio/portfolio-8-mob.jpg 1x, 
                                                 ./img/portfolio/portfolio-8-mob@2x.jpg 2x"
                                     media="(min-width: 320px)" />
+                                <img class="card__img" src="./img/portfolio/portfolio-8-mob.jpg" alt="Проект LAB">
                             </picture>
-                            <img class="card__img" src="./img/portfolio/portfolio-8-mob.jpg" alt="Проект LAB">
                             <p class="card__text">Ресурс предлагает комплексные предложения с разным уровнем
                                 функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о
                                 компании или частном лице.</p>
@@ -290,8 +295,8 @@
                                 <source srcset="./img/portfolio/portfolio-9-mob.jpg 1x,
                                                 ./img/portfolio/portfolio-9-mob@2x.jpg 2x"
                                     media="(min-width: 320px)" />
+                                <img class="card__img" src="./img/portfolio/portfolio-9-mob.jpg" alt="Growing Business">
                             </picture>
-                            <img class="card__img" src="./img/portfolio/portfolio-9-mob.jpg" alt="Growing Business">
                             <p class="card__text">Ресурс предлагает комплексные предложения с разным уровнем
                                 функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о
                                 компании или частном лице.</p>
